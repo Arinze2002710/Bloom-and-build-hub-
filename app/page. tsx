@@ -1,0 +1,28 @@
+import { posts } from "@/lib/posts";
+import PostBrowser from "@/components/PostBrowser";
+
+export default function HomePage() {
+  return (
+    <>
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-14">
+        <div className="max-w-2xl">
+          <p className="font-body text-sm text-sage-700 mb-4">
+            Budgeting · Saving · Side Hustles · AI Tools
+          </p>
+          <h1 className="font-display text-5xl sm:text-6xl leading-[1.05] text-ink">
+            Money that feels lighter, one small habit at a time.
+          </h1>
+          <p className="font-body text-lg text-ink/70 mt-6 max-w-lg">
+            Bloom &amp; Build Hub is a quiet corner of the internet for practical
+            money guidance — no jargon, no guilt, just ideas you can actually use
+            this week.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <PostBrowser posts={posts} />
+      </section>
+    </>
+  );
+}
