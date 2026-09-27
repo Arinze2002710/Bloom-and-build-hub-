@@ -1,0 +1,42 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        cream: "#FAF8F3",
+        paper: "#F3F0E7",
+        ink: "#2C2E27",
+        sage: {
+          50: "#F3F5F0",
+          100: "#E4E9DD",
+          200: "#CBD6BE",
+          300: "#AFC09C",
+          400: "#93A87D",
+          500: "#788F62",
+          600: "#5F7350",
+          700: "#4B5A40",
+          800: "#3A4632",
+          900: "#2C3527",
+        },
+        honey: "#C9A66B",
+        clay: "#B98A6F",
+      },
+      fontFamily: {
+        display: ["var(--font-cormorant)", "serif"],
+        body: ["var(--font-dm-sans)", "sans-serif"],
+      },
+      maxWidth: {
+        content: "72ch",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;
