@@ -1,0 +1,78 @@
+export const metadata = {
+  title: "Privacy Policy | Bloom & Build Hub",
+  description: "How Bloom & Build Hub collects and uses information.",
+};
+
+export default function PrivacyPolicyPage() {
+  return (
+    <div className="mx-auto max-w-content px-6 py-20">
+      <p className="font-body text-sm text-sage-700 mb-4">Privacy Policy</p>
+      <h1 className="font-display text-5xl leading-tight text-ink mb-4">
+        Privacy Policy
+      </h1>
+      <p className="font-body text-sm text-ink/50 mb-10">Last updated: September 2026</p>
+
+      <div className="space-y-8 font-body text-[16px] leading-[1.8] text-ink/85">
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">Information we collect</h2>
+          <p>
+            When you use the contact form on this site, we collect the name,
+            email address, and message you provide. If this site uses
+            analytics tools, we may also collect standard technical
+            information such as browser type, device type, and pages
+            visited.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">How we use it</h2>
+          <p>
+            Information submitted through the contact form is used solely to
+            respond to your message. Analytics data, if collected, is used
+            in aggregate to understand which content is useful and to
+            improve the site. We do not sell personal information to third
+            parties.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">Cookies</h2>
+          <p>
+            This site may use cookies for basic functionality and analytics.
+            You can disable cookies through your browser settings; doing so
+            may affect some site features.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">Third-party links</h2>
+          <p>
+            Posts on this site may link to third-party tools, products, or
+            services, including affiliate links. We are not responsible for
+            the privacy practices of those third-party sites — please review
+            their own policies.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">Your rights</h2>
+          <p>
+            You may request access to, correction of, or deletion of any
+            personal information you've submitted to us by reaching out
+            through the contact page.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink mb-3">Contact</h2>
+          <p>
+            Questions about this policy can be sent through the contact page
+            on this site.
+          </p>
+        </section>
+        <section>
+          <p className="text-sm text-ink/50">
+            This policy is a general template and not legal advice — have it
+            reviewed by a professional before publishing a live site that
+            collects personal data.
+          </p>
+        </section>
+      </div>
+    </div>
+  );
+}
