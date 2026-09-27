@@ -1,0 +1,39 @@
+import Link from "next/link";
+import { Post } from "@/lib/types";
+
+const heightClass: Record<Post["height"], string> = {
+  short: "aspect-[4/3]",
+  medium: "aspect-[3/4]",
+  tall: "aspect-[2/3]",
+};
+
+const accentClass: Record<Post["accent"], string> = {
+  sage: "from-sage-300 to-sage-600",
+  honey: "from-honey/60 to-honey",
+  clay: "from-clay/50 to-clay",
+};
+
+export default function PinCard({ post }: { post: Post }) {
+  return (
+    <Link href={`/blog/${post.slug}`} className="pin-item group block">
+      <article className="rounded-2xl overflow-hidden border border-sage-200/70 bg-white/60 transition-shadow hover:shadow-[0_8px_30px_-12px_rgba(72,86,64,0.35)]">
+        <div
+          className={`relative ${heightClass[post.height]} w-full bg-gradient-to-br ${accentClass[post.accent]} flex items-end p-5`}
+        >
+          <span className="font-body text-xs tracking-wide text-white/90 bg-black/10 rounded-full px-3 py-1">
+            {post.category}
+          </span>
+        </div>
+        <div className="p-5">
+          <h3 className="font-display text-2xl leading-snug text-ink group-hover:text-sage-700 transition-colors">
+            {post.title}
+          </h3>
+          <p className="font-body text-sm text-ink/70 mt-2 line-clamp-3">
+            {post.excerpt}
+          </p>
+          <p className="font-body text-xs text-ink/45 mt-4">{post.readTime} read</p>
+        </div>
+      </article>
+    </Link>
+  );
+}
