@@ -1,0 +1,44 @@
+export const metadata = {
+  title: "About Me | Bloom & Build Hub",
+  description: "The story behind Bloom & Build Hub.",
+};
+
+export default function AboutPage() {
+  return (
+    <div className="mx-auto max-w-content px-6 py-20">
+      <p className="font-body text-sm text-sage-700 mb-4">About Me</p>
+      <h1 className="font-display text-5xl leading-tight text-ink mb-8">
+        Hi, I'm glad you're here.
+      </h1>
+
+      <div className="space-y-6 font-body text-[17px] leading-[1.8] text-ink/85">
+        <p>
+          I started Bloom &amp; Build Hub after spending most of my twenties
+          treating money like something to worry about instead of something
+          to understand. A spreadsheet, a lot of trial and error, and a
+          handful of good habits later, I wanted a place to share what
+          actually worked — without the guilt trips that usually come with
+          personal finance advice.
+        </p>
+        <p>
+          This site covers the things I wish someone had explained to me
+          plainly: how to build a budget you'll keep, how to save for the
+          expenses that only feel like surprises, how to start a side hustle
+          without quitting your job, and how to use new tools like AI to make
+          managing money faster instead of more confusing.
+        </p>
+        <p>
+          I'm not a financial advisor, and nothing here is personalized
+          financial advice — just what I've learned, tested, and found
+          genuinely useful. My hope is that it saves you some of the trial
+          and error it took me to get here.
+        </p>
+        <p>
+          When I'm not writing, you'll usually find me reorganizing a savings
+          spreadsheet for fun, testing a new budgeting app, or drinking too
+          much tea while planning next month's content.
+        </p>
+      </div>
+    </div>
+  );
+}
