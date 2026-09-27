@@ -1,0 +1,46 @@
+"use client";
+
+import { useState } from "react";
+import { Post } from "@/lib/types";
+import MasonryGrid from "./MasonryGrid";
+
+const categories: Array<Post["category"] | "All"> = [
+  "All",
+  "Budgeting",
+  "Saving",
+  "Side Hustles",
+  "Make Money Online",
+  "AI Tools",
+  "Personal Finance",
+];
+
+export default function PostBrowser({ posts }: { posts: Post[] }) {
+  const [active, setActive] = useState<(typeof categories)[number]>("All");
+
+  const filtered = active === "All" ? posts : posts.filter((p) => p.category === active);
+
+  return (
+    <div>
+      <div className="flex flex-wrap gap-2 mb-10" role="group" aria-label="Filter posts by topic">
+        {categories.map((cat) => {
+          const isActive = cat === active;
+          return (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              aria-pressed={isActive}
+              className={`font-body text-sm px-4 py-2 rounded-full border transition-colors ${
+                isActive
+                  ? "bg-sage-700 text-white border-sage-700"
+                  : "bg-transparent text-ink/70 border-sage-200 hover:border-sage-400"
+              }`}
+            >
+              {cat}
+            </button>
+          );
+        })}
+      </div>
+      <MasonryGrid posts={filtered} />
+    </div>
+  );
+}
