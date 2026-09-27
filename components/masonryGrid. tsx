@@ -1,0 +1,14 @@
+import { Post } from "@/lib/types";
+import PinCard from "./PinCard";
+
+export default function MasonryGrid({ posts }: { posts: Post[] }) {
+  return (
+    <div className="pin-grid">
+      {posts.map((post) => (
+        <div key={post.slug} className="pin-item">
+          <PinCard post={post} />
+        </div>
+      ))}
+    </div>
+  );
+}
