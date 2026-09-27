@@ -1,0 +1,121 @@
+import { Post } from "./types";
+
+export const posts: Post[] = [
+  {
+    slug: "zero-based-budget-that-actually-sticks",
+    title: "The Zero-Based Budget That Actually Sticks",
+    excerpt:
+      "A gentler take on giving every dollar a job — built for people who've quit budgeting three times already.",
+    category: "Budgeting",
+    readTime: "6 min",
+    date: "2026-09-02",
+    height: "tall",
+    accent: "sage",
+    content: [
+      "Most budgets fail for the same reason most diets fail: they're built for a version of you that doesn't get tired, distracted, or tempted by a Tuesday afternoon coffee run. A budget that survives contact with real life starts smaller than you think it should.",
+      "Begin with three categories, not thirty. Fixed costs, flexible spending, and future you. Fixed costs are the bills that don't move — rent, insurance, subscriptions you've forgotten to cancel. Flexible spending is everything that changes week to week: groceries, gas, the occasional takeout order. Future you covers savings, debt payoff, and investing.",
+      "Once those three buckets feel automatic, split flexible spending further. But not before. Adding complexity too early is the single biggest reason people abandon a system in week two.",
+      "Give every dollar a job before the month starts, not after it's already spent. This is the actual definition of zero-based budgeting — income minus every planned expense and savings goal equals zero. Not because you spend everything, but because every dollar has already been assigned somewhere, including into savings.",
+      "Review weekly, not daily. Checking your budget every single day turns money into a source of anxiety instead of a tool. Fifteen minutes on a Sunday is enough to adjust for the week ahead and catch anything that slipped.",
+    ],
+  },
+  {
+    slug: "sinking-funds-for-irregular-expenses",
+    title: "Sinking Funds: The Quiet Fix for 'Surprise' Expenses",
+    excerpt:
+      "Car repairs and holiday gifts aren't surprises — they're just expenses you haven't budgeted for yet.",
+    category: "Saving",
+    readTime: "5 min",
+    date: "2026-08-24",
+    height: "medium",
+    accent: "honey",
+    content: [
+      "A sinking fund is a savings category for an expense you know is coming, even if you don't know exactly when. Car maintenance, annual insurance premiums, holiday gifts, your dog's next vet visit — none of these are actually surprises. They're just irregular.",
+      "Start by listing every expense that happens less often than monthly but more often than never. Estimate a yearly cost for each, then divide by twelve. That number is what you set aside every month, in its own labeled account or envelope.",
+      "The relief isn't really financial — it's emotional. Money you've already set aside for a known expense stops feeling like an emergency when it arrives.",
+    ],
+  },
+  {
+    slug: "beginner-side-hustles-five-hours-a-week",
+    title: "Five Side Hustles You Can Start With Five Hours a Week",
+    excerpt:
+      "No course to buy, no inventory to store — just realistic ways to add a second income stream around a full-time job.",
+    category: "Side Hustles",
+    readTime: "8 min",
+    date: "2026-09-14",
+    height: "tall",
+    accent: "clay",
+    content: [
+      "The best side hustle isn't the one with the highest ceiling — it's the one you'll actually keep doing after a long day at your main job. Here are five that ask for a small, honest time commitment.",
+      "Freelance proofreading. If you notice typos in group chats without trying, this is low-effort income. Start with local business newsletters and small blogs before pitching bigger clients.",
+      "Selling printables. Templates, planners, and worksheets sell well because they cost you nothing to reproduce once made. A single weekend can produce a small catalog.",
+      "Pet sitting through an app. Flexible, cash-adjacent, and mostly about showing up reliably rather than having a specific skill.",
+      "Renting out unused space or equipment. A parking spot, a spare closet, a pressure washer sitting in the garage — platforms exist for renting almost anything.",
+      "Tutoring one subject, one age group. Narrow the scope on purpose. 'Algebra for ninth graders' books faster than 'math tutor' because it tells a worried parent exactly what they're getting.",
+    ],
+  },
+  {
+    slug: "ai-tools-for-managing-money",
+    title: "The AI Tools Actually Worth Using for Your Money",
+    excerpt:
+      "Not another list of chatbots — a practical look at where AI genuinely saves time on budgeting and saving.",
+    category: "AI Tools",
+    readTime: "7 min",
+    date: "2026-09-20",
+    height: "medium",
+    accent: "sage",
+    content: [
+      "AI is genuinely useful for personal finance in a few narrow places, and mostly unnecessary everywhere else. Here's where it earns its keep.",
+      "Categorizing transactions. Budgeting apps that use AI to sort your spending save real time over manual tagging, especially once your history stretches back a few years.",
+      "Summarizing statements and contracts. Pasting a phone plan or insurance policy into an AI assistant and asking 'what am I actually paying for' surfaces fees you'd otherwise skim past.",
+      "Drafting negotiation scripts. Asking for a short, direct message to lower a bill or negotiate a rate gives you a starting point that's easy to personalize.",
+      "Where it falls short: specific investment advice, tax filing accuracy, and anything that needs to know your complete financial picture. Treat it as a fast first draft, not a financial advisor.",
+    ],
+  },
+  {
+    slug: "make-money-online-without-a-following",
+    title: "How to Make Money Online Without an Audience",
+    excerpt:
+      "Most 'make money online' advice assumes 10,000 followers. This doesn't.",
+    category: "Make Money Online",
+    readTime: "6 min",
+    date: "2026-08-30",
+    height: "short",
+    accent: "honey",
+    content: [
+      "You don't need a following to earn online — you need a service someone already wants and a place to list it. Freelance platforms, task marketplaces, and micro-consulting sites connect you directly with buyers, no audience required.",
+      "Start narrow. 'I format Notion dashboards for small business owners' books faster than 'I do virtual assistant work,' because it answers the buyer's question before they ask it: what exactly do I get?",
+      "Price by the outcome, not the hour, once you've done a task enough times to know how long it takes. It rewards getting faster instead of punishing it.",
+    ],
+  },
+  {
+    slug: "building-an-emergency-fund-from-zero",
+    title: "Building an Emergency Fund When You're Starting From Zero",
+    excerpt:
+      "A realistic order of operations for the first $1,000, and why it matters more than the interest rate.",
+    category: "Personal Finance",
+    readTime: "5 min",
+    date: "2026-07-19",
+    height: "medium",
+    accent: "clay",
+    content: [
+      "The first $1,000 in savings does more for your financial stability than almost any other milestone, because it's the buffer between a bad week and a bad year.",
+      "Automate a fixed amount the day you're paid, before it has a chance to become spending money. Even a small amount, moved consistently, outperforms a larger amount moved occasionally.",
+      "Keep it boring and accessible — a high-yield savings account, not an investment account. This money's job is to be there when the car won't start, not to grow.",
+      "Once you hit the first $1,000, widen the goal to three months of essential expenses. The pace can slow down here; the hardest part was proving to yourself that saving is possible at all.",
+    ],
+  },
+];
+
+export function getPostBySlug(slug: string): Post | undefined {
+  return posts.find((p) => p.slug === slug);
+}
+
+export function getRelatedPosts(current: Post, count = 3): Post[] {
+  return posts
+    .filter((p) => p.slug !== current.slug)
+    .sort((a, b) =>
+      a.category === current.category ? -1 : b.category === current.category ? 1 : 0
+    )
+    .slice(0, count);
+}
