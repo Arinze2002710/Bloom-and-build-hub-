@@ -1,0 +1,22 @@
+import ContactForm from "@/components/ContactForm";
+
+export const metadata = {
+  title: "Contact | Bloom & Build Hub",
+  description: "Get in touch with Bloom & Build Hub.",
+};
+
+export default function ContactPage() {
+  return (
+    <div className="mx-auto max-w-content px-6 py-20">
+      <p className="font-body text-sm text-sage-700 mb-4">Contact</p>
+      <h1 className="font-display text-5xl leading-tight text-ink mb-6">
+        Say hello.
+      </h1>
+      <p className="font-body text-lg text-ink/70 mb-10 max-w-lg">
+        Questions, collaboration ideas, or a topic you'd like covered on the
+        blog — send it over.
+      </p>
+      <ContactForm />
+    </div>
+  );
+}
