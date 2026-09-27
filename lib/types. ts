@@ -1,0 +1,11 @@
+export type Post = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: "Budgeting" | "Saving" | "Make Money Online" | "Side Hustles" | "AI Tools" | "Personal Finance";
+  readTime: string;
+  date: string;
+  height: "short" | "medium" | "tall";
+  accent: "sage" | "honey" | "clay";
+  content: string[];
+};
