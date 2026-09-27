@@ -1,0 +1,63 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { posts, getPostBySlug, getRelatedPosts } from "@/lib/posts";
+import PinCard from "@/components/PinCard";
+
+export function generateStaticParams() {
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug);
+  if (!post) return {};
+  return {
+    title: `${post.title} | Bloom & Build Hub`,
+    description: post.excerpt,
+  };
+}
+
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = getPostBySlug(params.slug);
+  if (!post) notFound();
+
+  const related = getRelatedPosts(post);
+
+  return (
+    <article className="mx-auto max-w-content px-6 py-16">
+      <Link href="/" className="font-body text-sm text-sage-700 hover:text-sage-800">
+        ← Back to all posts
+      </Link>
+
+      <p className="font-body text-sm text-ink/50 mt-8">
+        {post.category} · {post.readTime} read · {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+      </p>
+
+      <h1 className="font-display text-4xl sm:text-5xl leading-tight text-ink mt-3">
+        {post.title}
+      </h1>
+
+      <p className="font-body text-lg text-ink/70 mt-5 leading-relaxed">
+        {post.excerpt}
+      </p>
+
+      <div className="mt-10 space-y-6 font-body text-[17px] leading-[1.8] text-ink/85">
+        {post.content.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
+        ))}
+      </div>
+
+      {related.length > 0 && (
+        <section className="mt-20 pt-12 border-t border-sage-200/70">
+          <h2 className="font-display text-3xl text-ink mb-8">Keep reading</h2>
+          <div className="pin-grid">
+            {related.map((p) => (
+              <div key={p.slug} className="pin-item">
+                <PinCard post={p} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </article>
+  );
+}
